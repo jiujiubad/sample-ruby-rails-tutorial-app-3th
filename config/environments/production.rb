@@ -83,4 +83,6 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+  # 让heroku服务静态资源文件
+  config.serve_static_assets = true
 end
