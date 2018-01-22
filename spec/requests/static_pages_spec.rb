@@ -38,7 +38,7 @@ describe "Static pages", :type => :feature do #注意是feature
   describe "Contact page" do
     it "should have the content 'Contact'" do
       visit '/static_pages/contact'
-      expect(page).to have_content('Contact')
+      expect(page).to have_content('Contact Ruby')
     end
     it "should have the title 'Contact'" do
       visit '/static_pages/contact'

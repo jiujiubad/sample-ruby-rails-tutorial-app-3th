@@ -41,6 +41,8 @@ group :development, :test do
   # 自动化测试
   gem 'rspec-rails'
   gem 'capybara'
+  # 自动执行rspec测试。执行guard，可以启用。
+  gem 'guard-rspec'
 end
 
 group :development do
