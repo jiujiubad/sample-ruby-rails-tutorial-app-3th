@@ -39,4 +39,7 @@ Rails.application.configure do
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
+
+  # gem 'bcrypt'加密密码的速度，耗时因子改为最小。
+  ActiveModel::SecurePassword.min_cost = true
 end

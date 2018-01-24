@@ -34,7 +34,7 @@ gem 'jbuilder', '~> 2.5'
 # gem 'capistrano-rails', group: :development
 
 gem 'bootstrap-sass'
-gem 'bcrypt'
+gem 'bcrypt' #加密密码
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -46,6 +46,8 @@ group :development, :test do
   gem 'capybara'
   # 自动执行rspec测试。执行guard，可以启用。
   gem 'guard-rspec'
+  # 用简单语法，用块和方法定义对象属性值，生成ActiveRecord对象。
+  gem 'factory_girl_rails'
 end
 
 group :development do
