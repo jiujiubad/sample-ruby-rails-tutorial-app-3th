@@ -48,6 +48,9 @@ group :development, :test do
   gem 'guard-rspec'
   # 用简单语法，用块和方法定义对象属性值，生成ActiveRecord对象。
   gem 'factory_girl_rails'
+  # BDD测试
+  gem 'cucumber-rails'
+  gem 'database_cleaner'
 end
 
 group :development do
