@@ -1,7 +1,7 @@
 require 'rails_helper'
 require 'support/utilities.rb'
 
-RSpec.describe "UserPages", type: :feature do
+RSpec.describe "UserPages", type: :request do
   subject { page }
 
   describe "signup page" do

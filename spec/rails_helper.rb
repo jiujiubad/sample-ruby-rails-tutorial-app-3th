@@ -56,4 +56,7 @@ RSpec.configure do |config|
   config.filter_rails_from_backtrace!
   # arbitrary gems may also be filtered via:
   # config.filter_gems_from_backtrace("gem name")
+
+  # 引入capybara，这样rspec选择type为request时，才不会报错
+  config.include Capybara::DSL
 end

@@ -1,7 +1,7 @@
 require 'rails_helper' #注意是rails_helper
 require 'support/utilities.rb'
 
-describe "Static pages", :type => :feature do #注意是feature
+describe "Static pages", :type => :request do #注意是feature
   subject { page }
   shared_examples_for "all static pages" do
     it { should have_content(heading) }
