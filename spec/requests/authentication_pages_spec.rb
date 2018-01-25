@@ -1,4 +1,5 @@
 require 'rails_helper'
+require 'support/utilities.rb'
 
 RSpec.describe "AuthenticationPages", type: :feature do
   subject { page }
