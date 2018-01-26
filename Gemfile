@@ -46,6 +46,7 @@ group :development, :test do
   gem 'sqlite3'
   # 自动化测试
   gem 'rspec-rails'
+  gem 'rspec-its'
   gem 'capybara'
   # 自动执行rspec测试。执行guard，可以启用。
   gem 'guard-rspec'

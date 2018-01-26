@@ -1,4 +1,6 @@
 class User < ApplicationRecord
+  has_many :microposts
+
   before_save { self.email = email.downcase }
   before_create :create_remember_token
 
@@ -20,7 +22,7 @@ class User < ApplicationRecord
   end
 
   private
-  
+
   def create_remember_token
     self.remember_token = User.encrypt(User.new_remember_token)
   end
