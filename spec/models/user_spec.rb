@@ -15,6 +15,7 @@ RSpec.describe User, type: :model do
   it { should respond_to(:authenticate) }
   it { should respond_to(:admin) }
   it { should respond_to(:microposts) }
+  it { should respond_to(:feed) }
   it { should_not be_admin }
   it { should be_valid }
 
@@ -136,5 +137,20 @@ RSpec.describe User, type: :model do
     end
   end
 
+  describe "status" do
+    before { @user.save }
+    let!(:older_micropost) do
+      FactoryGirl.create(:micropost, user: @user, created_at: 1.day.ago)
+    end
+    let!(:newer_micropost) do
+      FactoryGirl.create(:micropost, user: @user, created_at: 1.hour.ago)
+    end
+    let(:unfollowed_post) do
+      FactoryGirl.create(:micropost, user: FactoryGirl.create(:user))
+    end
+    its(:feed) { should include(newer_micropost) }
+    its(:feed) { should include(older_micropost) }
+    its(:feed) { should_not include(unfollowed_post) }
+  end
 
 end
