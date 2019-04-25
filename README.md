@@ -1,4 +1,10 @@
-# 《Ruby on Rails Tutorial》示例代码
+# 《Ruby on Rails Tutorial》第三版 示例代码
+
+## 主要模块
+
+1、定制登录注册模块
+
+2、微博
 
 ## Ruby on Rails Tutorial: sample application
 This is the sample application for
